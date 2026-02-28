@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Lookup</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.8/yeti/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@200&family=Vidaloka&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Xanh+Mono:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo1.png" alt="Logo" />
+          Layout Lookup
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#section1">Why?</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#section2">Features</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#section3">Styles</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#section4">Learn More</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECTION 1: INTRO -->
+    <section id="section1" class="section-intro">
+      <div class="container py-5 text-center">
+        <h1 class="mb-3 title">Why does Interior Design matter?</h1>
+
+        <p class="lead description">
+          Interior design is more than decoration. It shapes how we live, work,
+          and feel inside a space. A well-designed interior improves comfort,
+          function, and wellbeing while reflecting personality and culture.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CHARACTERISTICS -->
+    <section id="section2" class="section-features">
+      <div class="container py-5 text-center">
+        <div class="row g-4">
+          <div class="col-md-4 text-start text-center">
+            <h3>Function</h3>
+            <p>
+              Good design organizes space, improves flow, and makes daily
+              routines easier—especially in small or shared areas.
+            </p>
+          </div>
+
+          <div class="col-md-4 text-start text-center">
+            <h3>Wellbeing</h3>
+            <p>
+              Lighting, colors, and layout influence mood, focus, and rest.
+              Design can reduce stress and increase productivity.
+            </p>
+          </div>
+
+          <div class="col-md-4 text-start text-center">
+            <h3>Value</h3>
+            <p>
+              Thoughtful interiors increase property appeal and perceived
+              quality—useful for homes, rentals, and businesses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section3" class="section-types">
+      <div class="hero-bg">
+        <div class="hero-overlay">
+          <div class="container py-5">
+            <!-- Carousel -->
+            <div id="carouselExample" class="carousel slide hero-carousel">
+              <div class="carousel-inner rounded-4 overflow-hidden">
+                <div class="carousel-item active">
+                  <img src="images/artdeco.png" class="d-block w-100" alt="" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Art Deco</h2>
+                    <p>Glamorous and bold</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/industrial.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Industrial Style</h2>
+                    <p>Raw and urban</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/bohemian.jpeg"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Bohemian Style</h2>
+                    <p>Eclectic and soulful</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/frenchcountry.jpg"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>French Country Style</h2>
+                    <p>Romantic and refined</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/farmhouse.jpg"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Farmhouse Style</h2>
+                    <p>Rustic and cozy</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/contemporary.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Contemporary Style</h2>
+                    <p>Fluid and current</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="images/coastal.png" class="d-block w-100" alt="" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Coastal Style</h2>
+                    <p>Breezy and relaxed</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="images/japandi.png" class="d-block w-100" alt="" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Japandi Style</h2>
+                    <p>Zen and organic</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/mediterrean.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Mediterrean Style</h2>
+                    <p>Sun-drenched and earthy</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/midcenturymodern.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Mid-Century Modern Style</h2>
+                    <p>Timeless and streamlined</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/minimalist.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Minimalist Style</h2>
+                    <p>Sparse and intentional</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/traditional.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Traditional Style</h2>
+                    <p>Formal and timeless</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/transitional.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Transitional Style</h2>
+                    <p>Balanced and versatile</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="images/victorian.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Victorian Style</h2>
+                    <p>Ornate and dramatic</p>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section4" class="section-history">
+      <div class="container py-5 text-center history-content">
+        <h2 class="mb-4">
+          Learn more about the different interior design styles and choose your
+          favorite
+        </h2>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/artdeco.html" class="style-link">Art Deco</a>
+              </h3>
+              <p>
+                Rose in the 1920s-1930s, inspired by modernity, luxury, and
+                geometric forms. Known for bold symmetry, metallic finishes, and
+                glamorous materials.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/industrial.html" class="style-link">Industrial</a>
+              </h3>
+              <p>
+                Became popular in the late 20th century as old factories and
+                warehouses were converted into homes. Exposed brick, steel,
+                concrete, and “unfinished” textures define the look.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/bohemian.html" class="style-link">Bohemian</a>
+              </h3>
+              <p>
+                Influenced by artistic and nomadic lifestyles, especially from
+                the 1960s-1970s counterculture. Layered textiles, mixed
+                patterns, global decor, and a relaxed feel are typical.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/contemporary.html" class="style-link"
+                  >Contemporary</a
+                >
+              </h3>
+              <p>
+                “Contemporary” means current and evolving—changing over time. It
+                often features clean shapes, balanced contrast, and a mix of
+                materials, adapting to today's trends.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/coastal.html" class="style-link">Coastal</a>
+              </h3>
+              <p>
+                Inspired by seaside living—popular in beach communities and
+                modern lifestyle branding. Light colors, airy fabrics, and
+                natural textures create a relaxed atmosphere.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/japandi.html" class="style-link">Japandi</a>
+              </h3>
+              <p>
+                A modern blend of Japanese and Scandinavian principles.
+                Emphasizes calm, craftsmanship, natural materials, and minimal
+                but warm spaces.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/mediterranean.html" class="style-link"
+                  >Mediterranean</a
+                >
+              </h3>
+              <p>
+                Rooted in Southern European coastal architecture (Spain, Italy,
+                Greece). Warm earthy palettes, textured walls, arches, tile, and
+                wrought iron reflect sun-drenched regional traditions.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/midcenturymodern.html" class="style-link"
+                  >Mid-Century Modern</a
+                >
+              </h3>
+              <p>
+                Popular from the 1940s-1960s. Known for iconic furniture,
+                organic curves, tapered legs, and a mix of wood with bold
+                accents.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/minimalist.html" class="style-link">Minimalism</a>
+              </h3>
+              <p>
+                Gained momentum in late 20th century, influenced by Modernism
+                and Japanese design. Focuses on simplicity, negative space, and
+                intentional choices.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/traditional.html" class="style-link"
+                  >Traditional</a
+                >
+              </h3>
+              <p>
+                Inspired by classic European interiors (18th-19th century
+                influences). Symmetry, rich materials, and timeless furniture
+                forms define the style.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/transitional.html" class="style-link"
+                  >Transitional</a
+                >
+              </h3>
+              <p>
+                A blend of Traditional and Contemporary—popular as a flexible
+                “in-between” approach. Combines classic comfort with cleaner,
+                updated lines.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/victorian.html" class="style-link">Victorian</a>
+              </h3>
+              <p>
+                Named after the Victorian era (mid-late 1800s). Characterized by
+                ornate detailing, layered patterns, dark woods, and a maximalist
+                sense of decoration.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/farmhouse.html" class="style-link">Farmhouse</a>
+              </h3>
+              <p>
+                A warm and inviting style inspired by traditional country homes,
+                blending rustic charm with clean, modern simplicity.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="history-card">
+              <h3>
+                <a href="html/frenchcountry.html" class="style-link"
+                  >French Country</a
+                >
+              </h3>
+              <p>
+                An elegant yet relaxed style inspired by the French countryside,
+                where rustic elements meet refined, romantic details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid bg-black text-white py-4">
+      <div class="row align-items-center">
+        <!-- IZQUIERDA: Logo + texto -->
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <img
+            src="images/logo1.png"
+            alt="Logo"
+            style="height: 60px"
+            class="mb-2"
+          />
+
+          <p class="mb-0">
+            <i class="fa-regular text-center"></i>
+            “The home should be the treasure chest of living.” - Le Corbusier
+          </p>
+
+          <p class="mb-0">
+            <i class="fa-regular fa-copyright"></i>
+            Rights Reserved 2026. Layout Lookup
+          </p>
+
+          <p class="mb-0">
+            <i class="fa-regular fa-socialmedia"></i>
+
+            Follow us in social media for more design inspiration and tips!
+            @LayoutLookup
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">
+                Email address
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputQuestion" class="form-label">
+                Question
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputQuestion"
+              />
+              <div class="form-text text-light">
+                Text your questions or comments here. We will respond as quickly
+                as possible.
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
