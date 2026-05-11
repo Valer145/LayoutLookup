@@ -1,195 +1,78 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.hero-bg{
-    background-image: url("images/fondo.png"); 
+.hero-bg {
+    background-image: url("images/fondo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 80vh;
 }
 
-.section-intro{
-    background-color: #2d599a; 
+.section-intro {
+    background-color: #2d599a;
     padding: 80px 0;
 }
 
-.hero-overlay{
-    background: rgba(0,0,0,0.5);
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
     min-height: 80vh;
     display: flex;
     align-items: center;
 }
 
 
-.hero-carousel img{
-    height: 420px;      
+.hero-carousel img {
+    height: 420px;
     width: 100%;
-    object-fit: cover;  
+    object-fit: cover;
 }
 
-.hero-carousel{
+.hero-carousel {
     max-width: 1000px;
     margin: auto;
 }
 
 /* FULL PAGE STYLE TEMPLATE */
-.style-page{
+.style-page {
     margin: 0;
     min-height: 100vh;
 }
 
 /* Center content box */
-.style-content{
+.style-content {
     padding: 30px 40px;
     border-radius: 16px;
 }
 
-
-/* BOTÓN pequeño regresar home */
-.back-btn{
-    position: absolute;   
-    top: 20px;            
-    right: 20px;          
-    padding: 6px 12px;    
-    font-size: 0.8rem;    
-    background-color: #b3a998;
-    color: rgb(14, 13, 13);
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s ease;
-}
-
-.back-btn:hover{
-    background-color: #e5cb9e;
-}
-
-.bohemian-bg{
-    background-image: url("images/BohemianSlide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.artdeco-bg{
-    background-image: url("images/artdecoslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.coastal-bg{
-    background-image: url("images/coastalslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.contemporary-bg{
-    background-image: url("images/contemporaryslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.farmhouse-bg{
-    background-image: url("images/farmhouseslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.frenchcountry-bg{
-    background-image: url("images/frenchcslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.industrial-bg{
-    background-image: url("images/industrialslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.japandi-bg{
-    background-image: url("images/japandislide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.mediterranean-bg{
-    background-image: url("images/mediterreanslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.midcenturymodern-bg{
-    background-image: url("images/midcenturyslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.minimalist-bg{
-    background-image: url("images/minimalistslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.traditional-bg{
-    background-image: url("images/traditionalslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.transitional-bg{
-    background-image: url("images/transitionalslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.victorian-bg{
-    background-image: url("images/victorianslide.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.title{
-    color:white;
+.title {
+    color: white;
     font-size: 4rem;
     font-family: "Instrument Serif", serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.text-start{
-    color:#2d599a;
+.text-start {
+    color: #2d599a;
     font-size: 2rem;
     font-family: "Instrument Serif", serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.description{
-    color:white;
+.description {
+    color: white;
     font-size: 1.2rem;
     font-family: "Xanh Mono", monospace;
     font-weight: 400;
     font-style: normal;
 }
 
-.carousel-caption{
+.carousel-caption {
     color: black;
     font-size: 1.2rem;
     font-family: "Xanh Mono", monospace;
@@ -204,23 +87,245 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.navbar-brand img{
-    height: 30px;   
-    width: auto;    
+.navbar-brand img {
+    height: 30px;
+    width: auto;
 }
 
-.history-card{
-    color:black;
+.history-card {
+    color: black;
     font-size: 1.2rem;
     font-family: "Xanh Mono", monospace;
     font-weight: 400;
-    font-style: normal; 
+    font-style: normal;
 }
 
-.history-content{
-    color:#2d599a;
+.history-content {
+    color: #2d599a;
     font-size: 5rem;
     font-family: "Instrument Serif", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.history-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: 1px solid #eaeaea;
+}
+
+.card-img-wrapper {
+    position: relative;
+    aspect-ratio: 6 / 7;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.style-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.history-card:hover .style-image {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-overlay span {
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+.history-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+/* styles for each html page of the different styles*/
+.style-detail-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.style-image {
+    flex: 1;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.style-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.style-content {
+    flex: 1;
+    background-color: #2d599a;
+    color: white;
+    padding: 80px 60px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.style-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.headings-section h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.style-shortdesc {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    opacity: 0.95;
+    margin-bottom: 35px;
+}
+
+.style-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 28px;
+}
+
+.style-list {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.style-list li {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 28px;
+}
+
+.style-list li::before {
+    content: "•";
+    font-size: 1.6rem;
+    position: absolute;
+    left: 0;
+    color: #c9b89f;
+}
+
+.small-decor-image {
+    display: block;
+    margin: 15px 0 10px 0;
+    text-align: center;
+}
+
+.small-decor-image img {
+    transform: rotate(-90deg);
+    max-height: 380px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.back-home-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+    transition: transform 0.3s;
+}
+
+.back-home-btn:hover {
+    transform: scale(1.2);
+}
+
+.back-home-btn img {
+    width: 25px;
+    height: 25px;
+}
+
+.bottom-message {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.footer-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #e0d9c8;
+    opacity: 0.95;
+}
+
+.footer-text i {
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.footer-quote {
+    font-style: italic;
+    font-size: 1.12rem;
+    margin-bottom: 12px;
 }

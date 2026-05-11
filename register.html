@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Layout Lookup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<style>
+    body {
+      background-color: #2d599a; 
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .style-title {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+
+    .register-label {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.75rem;
+      font-weight: 500;
+      opacity: 0.8;
+      margin-bottom: 0.5rem;
+    }
+
+    .register-input {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .register-input:focus {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-color: white;
+      outline: none;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .register-input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: white;
+      color: #2d599a;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .btn-submit:hover {
+      background-color: #f8f9fa;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .login-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid white;
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+
+    .login-link:hover {
+      opacity: 0.7;
+    }
+</style>
+<body class="p-6">
+
+     <a href="../index.html" class="back-home-btn">
+        <img src="./images/homeicon.png" alt="Logo" class="h-24 mb-4 object-contain" />
+    </a>
+
+  <div class="w-full max-w-md">
+    <div class="flex flex-col items-center mb-12">
+      <img src="./images/logo1.png" alt="Logo" class="h-24 mb-4 object-contain" />
+      <p class="text-center italic text-lg opacity-90 max-w-xs">
+        "The home should be the treasure chest of living."
+      </p>
+      <span class="text-xs uppercase tracking-widest mt-3 opacity-60">— Le Corbusier</span>
+    </div>
+
+    <h2 class="style-title text-4xl text-center mb-10">Create Account</h2>
+
+    <form id="registerForm" class="space-y-6">
+      
+      <div>
+        <label class="register-label">Full Name</label>
+        <input 
+          type="text" 
+          name="name" 
+          id="name"
+          placeholder="Your name"
+          required
+          class="register-input">
+      </div>
+
+      <div>
+        <label class="register-label">Email Address</label>
+        <input 
+          type="email" 
+          name="email" 
+          id="email"
+          placeholder="hello@example.com"
+          required
+          class="register-input">
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="register-label">Password</label>
+          <input 
+            type="password" 
+            name="password" 
+            id="password"
+            required
+            class="register-input">
+        </div>
+        <div>
+          <label class="register-label">Confirm</label>
+          <input 
+            type="password" 
+            id="confirmPassword"
+            required
+            class="register-input">
+        </div>
+      </div>
+
+      <button 
+        type="submit"
+        id="submitBtn"
+        class="btn-submit">
+        Register
+      </button>
+      <p class="text-center mt-6 text-sm opacity-80">
+        Already have an account? 
+        <a href="login.html" class="login-link">Sign In</a>
+      </p>
+    </form>
+  </div>
+
+  <script>
+    const API_BASE_URL = "https://backend-layoutlookup.onrender.com";
+    const form = document.getElementById('registerForm');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        if (password !== confirmPassword) {
+            alert("Las contraseñas no coinciden");
+            return;
+        }
+        if (password.length < 6) {
+            alert("La contraseña debe tener al menos 6 caracteres");
+            return;
+        }
+
+        const userData = { name, email, password };
+
+        try {
+            // Usando la ruta corregida /api/auth/register
+            const res = await fetch(`${API_BASE_URL}/api/auth/register`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(userData)
+            });
+
+            const data = await res.json().catch(() => ({}));
+
+            if (res.ok) {
+                alert('¡Registro exitoso!');
+                localStorage.setItem('userToken', data.token);
+                localStorage.setItem('userInfo', JSON.stringify(data));
+                window.location.href = "index.html";
+            } else {
+                alert(data.message || "Error al registrarse");
+            }
+
+        } catch (error) {
+            console.error("Error:", error);
+            alert("No se pudo conectar con el servidor.");
+        }
+    });
+  </script>
+</body>
+</html>

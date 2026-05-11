@@ -1,23 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contemporary Style</title>
-
-    <!-- Link CSS (go up one level) -->
-    <link rel="stylesheet" href="../estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contemporary - Layout Lookup</title>
+    <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+  />
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.8/yeti/bootstrap.min.css" />
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="../estilos.css" />
 </head>
+<body>
 
-<body class="style-page contemporary-bg">
+  <div class="style-detail-container">
 
-    <div class="style-overlay">
-        <div class="style-content">
-            <a href="../index.html" class="back-btn">
-                ⬅ Home
-            </a>
-        </div>
+    
+    <div class="style-image">
+      <img src="../images/contemporary_window.jpeg" alt="Contemporary">
     </div>
 
+    
+    <div class="style-content">
+
+      
+      <a href="../index.html" class="back-home-btn">
+        <img src="../images/homeicon.png">
+      </a>
+
+      <h1 id="style-name" class="style-title"></h1>
+      <p id="short-desc" class="style-shortdesc"></p>
+      
+      <div class="headings-section">
+        <h4>A Little more History of this Style...</h4>
+        <p id="full-desc" class="style-description"></p>
+
+        <h4>Their Main Characteristics</h4>
+        <ul id="characteristics" class="style-list"></ul>
+
+        <h4>Color Palette </h4>
+        <ul id="colors" class="style-list"></ul>
+        <div class="small-decor-image">
+          <img src="../images/paletteC.png" alt="Decoración">
+        </div>
+
+        <h4>Typical Materials used for this Style</h4>
+        <ul id="materials" class="style-list"></ul>
+      </div>
+
+      <div class="bottom-message">
+        <h4>Thanks for reviewing this style! Continue exploring! If you have any inquiries, don't hesitate to reach out through the email on the main page.</h4>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+  <script>
+
+    const styleId = "69ebd1c94f72c9db5cc0abf1";
+
+    async function loadStyle() {
+      try {
+        const res = await fetch(`https://backend-layoutlookup.onrender.com/api/styles/${styleId}`);
+        const style = await res.json();
+
+        document.getElementById('style-name').textContent = style.name;
+        document.getElementById('short-desc').textContent = style.shortDescription || style.description.substring(0, 150) + "...";
+        document.getElementById('full-desc').textContent = style.description;
+
+        
+        const charList = document.getElementById('characteristics');
+        style.keyCharacteristics.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          charList.appendChild(li);
+        });
+
+    
+        const matList = document.getElementById('materials');
+        style.materials.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          matList.appendChild(li);
+        });
+
+      } catch (error) {
+        console.error(error);
+        alert("Error al cargar los datos del estilo");
+      }
+    }
+
+    window.onload = loadStyle;
+  </script>
 </body>
 </html>
